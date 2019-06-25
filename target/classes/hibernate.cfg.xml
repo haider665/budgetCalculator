@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://mysql3000.mochahost.com:3306/haider1_calculator?useSSL=false</property>
+        <property name="connection.username">haider1_bracu_ad</property>
+        <property name="connection.password">ananda@2802.h</property>
+        
+       
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">true</property>
+
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+ 		
+ 		<mapping class="com.calculator.entity.User"/>
+ 		<mapping class="com.calculator.entity.UserExpense"/>
+ 		<mapping class="com.calculator.entity.UserIncome"/>
+<!--  		<mapping class="com.amj.entity.Tarbiot"/> -->
+<!--  		<mapping class="com.amj.entity.Maal"/> -->
+ 		
+    </session-factory>
+
+</hibernate-configuration>
